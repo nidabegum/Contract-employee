@@ -1,0 +1,541 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body {
+    padding-top: 50px;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+.navbar-fixed-top {
+    border: 0;
+}
+
+.nav-sidebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-sidebar>ul>li {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+
+.sidebar .arrow {
+    float: right;
+    /* display: none; */
+}
+
+.dd {
+    display: none;
+}
+
+.dd1 {
+    display: none;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        padding-left: 45px;
+    }
+    .sidebar {
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        z-index: 1000;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+.nav>li>a {
+    /* color: #d84f57; */
+    color: #2193b0;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/*
+ * Main content
+ */
+
+.globaldata, .search {
+    /* padding: 20px; */
+}
+
+.navbar-inverse {
+    /* background-color: #d84f57; */
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    height: 60px;
+    /* background-image: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.rbColor {
+    background-color: #d84f57;
+}
+
+.rb-btn {
+    background-color: #d84f57;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0px;
+}
+
+.hr-line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.rb-btn:active {
+    transform: scale(0.9);
+}
+
+.rb-btn:hover {
+    box-shadow: 0 0 0 0;
+}
+
+.company-logo {
+    float: left;
+    height: 44px;
+    padding: 5px;
+    margin-top: 2px;
+    width: 60px;
+}
+
+.add-op-popup {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(192, 192, 192, 0.7);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.orText {
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.table-bordered {
+    margin-top: 15px;
+}
+
+.searchRow {
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.searchRow input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.searchRow .pull-right {
+    text-align: right;
+}
+
+@-webkit-keyframes blink {
+    from {
+        background-color: #025786;
+    }
+    50% {
+        background-color: #0F82FF;
+    }
+    to {
+        background-color: #025786;
+    }
+}
+
+.eventsList {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-header {
+    padding-bottom: 15px;
+    color: #d84f57;
+}
+
+.dashboard-banner .cd {
+    border-right: 1px solid #d84f57;
+    width: 20%;
+}
+
+.cd:last-child {
+    border: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.mark {
+    color: red;
+    font-size: 12px;
+}
+
+.totalCnt {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.pagination>.active>a {
+    background: #d84f57;
+    color: white;
+}
+
+.cd .dt {
+    font-size: 12px;
+    padding-top: 8px;
+}
+
+.cd .dt span {
+    font-weight: bold;
+}
+
+.cnt {
+    font-weight: bold;
+    font-size: 18px;
+    color: green;
+    text-align: right;
+}
+
+.sub-cnt {
+    font-size: 12px;
+}
+
+.cntry {
+    font-weight: bold;
+    color: #d84f57;
+}
+
+.glyphicon-refresh:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.eventsList li {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: 2px auto;
+    width: 52%;
+    list-style-type: none;
+}
+
+.pending {
+    background-color: #0F82FF !important;
+    color: #fff !important;
+    -webkit-animation: blink 1.5s ease-in infinite !important;
+}
+
+.success {
+    background-color: #009618;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .main {
+        margin: 0 0 0 25%;
+    }
+    .globaldata {
+        padding-right: 40px;
+        padding-left: 40px;
+        border-bottom: solid 1px #ccc;
+        display: none;
+    }
+    /* .search {
+        padding-right: 40px;
+        padding-left: 40px;
+    } */
+    #modify {
+        width: 60%;
+    }
+}
+
+.globaldata, hide {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #editbtn {
+        padding-right: 0;
+    }
+    .eventsList li {
+        width: 100%;
+        padding: 10px;
+    }
+    .generatediv {
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .dd {
+        /* display: inline-block;
+  margin-right:110px; */
+    }
+    .main {
+        margin: 0 0 0 16.66666667%;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.todo {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.center {
+    text-align: center;
+    margin-top: 10em;
+}
+
+.nav-stacked>li.active>a, .nav-stacked>li.active>a:focus, .nav-stacked>li.active>a:hover {
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    color: white;
+}
+
+.center-modal {
+    position: fixed;
+    top: 15%;
+    left: 18.5%;
+    z-index: 1050;
+    width: 80%;
+    height: 80%;
+    min-height: 80%;
+    margin-left: -10%;
+}
+
+form.form-horizontal.employee {
+    width: 48%;
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* border: 1px solid #ccc; */
+    margin-left: 9px;
+    margin-right: 9px;
+    vertical-align: top;
+    margin-bottom: 4px;
+    box-shadow: 0 0 12px #999;
+}
+
+.contractor .form-control, .client .form-control {
+    height: 28px;
+}
+
+form.form-horizontal.contractor,form.form-horizontal.client {
+    width: 70%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* border: 1px solid #ccc; */
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 12px #999;
+}
+
+form.form-horizontal.contract  {
+    width: 70%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-shadow: 0 0 12px #999;
+    margin:42px;
+}
+
+
+
+form.form-horizontal.contractor:nth-child(1),form.form-horizontal.client:nth-child(1) {
+    display: inline-block;
+    width: 70%;
+    border: none;
+    box-shadow: none;
+}
+
+form.form-horizontal.contractor:nth-child(2) {
+    display: inline-block;
+    width: 20%;
+    border: none;
+    box-shadow: none;
+}
+
+form.form-horizontal.employee:nth-child(1) {
+    border: none;
+    box-shadow: none;
+}
+
+form.form-horizontal.employee:nth-child(2) {
+    border: none;
+    vertical-align: middle;
+    box-shadow: none;
+}
+
+.info {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2193b0;
+}
+
+.contractor .info,.client .info {
+    text-align: left;
+    padding-left: 12px;
+    text-decoration: underline;
+    font-size:18px;
+    padding-bottom: 3px;
+}
+
+.contract .info {
+    text-align: left;
+    padding-left: 12px;
+    text-decoration: underline;
+    font-size:20px;
+    padding-bottom: 10px;
+    color:black;
+}
+
+.tick{
+    vertical-align: middle;
+    position: relative;
+    right: 144px;
+    top: 8px;
+}
+
+@media (min-width: 768px) {
+    .form-horizontal.contractor .control-label,.form-horizontal.client .control-label {
+        text-align: left;
+        padding-left :30px;
+    }
+}
+
+#result label {
+    /* color:#2193b0; */
+}
+
+.employee-img {
+    width: 26%;
+    float: right;
+    position: relative;
+    right: 6%
+}
+
+.form-group {
+    margin-bottom: 7px;
+}
+
+.contractor .form-group {
+    margin-bottom: 1px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    padding-top: 10px;
+    text-align: center;
+    color: #2193b0;
+}
+
+@media screen and (max-width: 1024px) {
+    form.form-horizontal.employee {
+        width: 96%;
+        padding-left: 13px;
+        padding-right: 13px;
+        margin-bottom: 30px;
+    }
+    form.form-horizontal.employee:nth-child(1) {
+        box-shadow: 0 0 12px #999;
+        position: relative;
+        top: 125px;
+    }
+    #menu {
+        z-index: 2;
+        position: absolute;
+        left: 19px;
+        width: 89%;
+        background: white;
+    }
+    #result label {
+        /* color: #2193b0; */
+        margin-top: 13px;
+    }
+    h1 {
+        padding-bottom: 10px;
+    }
+    .employee-img {
+        position: relative;
+        bottom: 430px;
+        right: 35%
+    }
+}
